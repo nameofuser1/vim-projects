@@ -16,6 +16,7 @@ current_dir = os.getcwd()
 copytree(current_dir, args.dir + os.sep + args.name + os.sep)
 
 EOF
+	return 1
 endfunction
 
 command! -nargs=1 VimProjectsCreate  call s:VimProjectCreate(<f-args>)
