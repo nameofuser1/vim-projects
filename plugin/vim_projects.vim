@@ -11,9 +11,14 @@ from shutil import copytree
 pname = vim.eval("a:name")
 tdir = vim.eval("g:vim_projects_dir")
 
+print(pname)
+print(tdir)
 
 current_dir = os.getcwd()
-copytree(current_dir, args.dir + os.sep + args.name + os.sep)
+print(current_dir)
+dst_path = tdir + os.sep + pname + os.sep
+print(dst_path)
+copytree(current_dir, dst_path)
 
 EOF
 	return 1
