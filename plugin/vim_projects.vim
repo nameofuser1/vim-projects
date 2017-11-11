@@ -2,22 +2,23 @@ if !has('python')
 	finish
 endif
 
-function! VimProjectCreate(name)
-	python <<< EOF
-	import vim
-	import os
-	from shutil copytree
+function! s:project_create(name)
+python << EOF
+import vim
+import os
+from shutil copytree
 
-	pname = vim.eval("a:name")
-	tdir = vim.eval("g:vim_projects_dir")
+pname = vim.eval("a:name")
+tdir = vim.eval("g:vim_projects_dir")
 
-	
-	current_dir = os.getcwd()
-	copytree(current_dir, args.dir + os.sep + args.name + os.sep)
-	
-	EOF
 
-:endfunction
+current_dir = os.getcwd()
+copytree(current_dir, args.dir + os.sep + args.name + os.sep)
+
+EOF
+endfunction
+
+command! -nargs=1 VimProjectsCreate  call s:VimProjectCreate(<f-args>)
 
 
 
