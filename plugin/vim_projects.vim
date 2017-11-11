@@ -19,7 +19,7 @@ EOF
 	return 1
 endfunction
 
-command! -nargs=1 VimProjectsCreate  call s:VimProjectCreate(<f-args>)
+command! -nargs=1 VimProjectsCreate  call s:project_create(<f-args>)
 
 
 
