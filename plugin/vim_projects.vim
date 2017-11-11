@@ -17,7 +17,7 @@ function! VimProjectCreate(name)
 	
 	EOF
 
-endfunction
+:endfunction
 
 
 
