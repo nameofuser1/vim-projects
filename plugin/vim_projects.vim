@@ -6,7 +6,7 @@ function! s:project_create(name)
 python << EOF
 import vim
 import os
-from shutil copytree
+from shutil import copytree
 
 pname = vim.eval("a:name")
 tdir = vim.eval("g:vim_projects_dir")
